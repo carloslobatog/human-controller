@@ -1,14 +1,11 @@
-import "/robocomp/interfaces/IDSLs/import1.idsl";
-import "/robocomp/interfaces/IDSLs/import2.idsl";
+import "/robocomp/interfaces/IDSLs/Laser.idsl";
+import "/robocomp/interfaces/IDSLs/TrajectoryRobot2D.idsl";
 
 Component human_controller
 {
 	Communications
 	{
-		implements interfaceName;
-		requires otherName;
-		subscribesTo topicToSubscribeTo;
-		publishes topicToPublish;
+		requires Laser, TrajectoryRobot2D;
 	};
 	language Cpp;
 	gui Qt(QWidget);
