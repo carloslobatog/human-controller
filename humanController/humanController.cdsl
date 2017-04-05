@@ -1,13 +1,14 @@
 import "/robocomp/interfaces/IDSLs/Laser.idsl";
 import "/robocomp/interfaces/IDSLs/TrajectoryRobot2D.idsl";
 import "/robocomp/interfaces/IDSLs/Navigator.idsl";
+import "/robocomp/interfaces/IDSLs/RGBD.idsl";
 
 Component humanController
 {
         Communications
         {
-                requires Laser, TrajectoryRobot2D, Navigator;
-        };
+                requires Laser, TrajectoryRobot2D, Navigator, RGBD;
+	};
         language Cpp;
         gui Qt(QWidget);
 };
